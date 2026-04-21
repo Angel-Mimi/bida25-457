@@ -1,4 +1,4 @@
-<!--Navigation bar-->
+/*Navigation bar*/
 .navbar.sticky-top{
     position: sticky;
     top: 0;
@@ -23,7 +23,7 @@
         color: #555;
     }
 
-    <!--Logo box-->
+    /*Logo box*/
         .navbar-brand img {
             width: 70px;
             height: 70px;
@@ -33,15 +33,19 @@
             background-color: #f8f9fa;
             padding: 4px;
         }
+.navbar-brand img {
+    max-height: 70px;   /* keeps logo balanced */
+    width: auto;        /* maintains aspect ratio */
+}
 
         
 
        
     
-    <!--footer-->
+    /*footer*/
     
-    .footer {
-            background-color: #333;
+    footer {
+            background-color: #E6E6FA;
             color: white;
             border-top: 1px solid #444;
             text-align: center;
