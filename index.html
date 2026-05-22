@@ -6,152 +6,323 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
     <link rel="stylesheet" href="style.css">
-    <link rel= "stylesheet" href="style.css">
-    <title>Homepage</title>
-
+    <title>Homepage - Everleigh Bath Co.</title>
     <style>
-        .navbar {
-            min-height: 80px;
+        /* Discount banner — under navbar, above carousel */
+        .discount-banner {
+            background-color: #f7c5d0;
+            color: #5a2d3a;
+            text-align: center;
+            padding: 18px 10px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
         }
+        .discount-banner a {
+            color: #5a2d3a;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .navbar { min-height: 80px; }
+
+        .carousel-item img {
+            max-height: 520px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 0.3rem;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Soft divider between sections */
+        .section-divider {
+            width: 55%;
+            margin: 0 auto;
+            border: none;
+            border-top: 1.5px solid #d9c7d4;
+        }
+
+        /* Category section background — soft pink */
+        .section-category {
+            background-color: #fde8f0;
+            padding: 2.5rem 0 2rem;
+        }
+
+        /* Concern section background — soft blue */
+        .section-concern {
+            background-color: #e4f0fb;
+            padding: 2.5rem 0 2rem;
+        }
+
+        /* Category cards */
+        .category-card {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .category-card:hover { transform: translateY(-4px); }
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .category-card .category-label {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.55));
+            color: #fff;
+            padding: 1rem 1rem 0.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Concern cards */
+        .concern-card {
+            border-radius: 14px;
+            background: #fff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .concern-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            color: #333;
+        }
+        .concern-card i {
+            font-size: 2rem;
+            color: #b5838d;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+        .concern-card h6 { font-weight: 600; margin-bottom: 0.3rem; }
+        .concern-card p { font-size: 0.8rem; color: #888; margin: 0; }
+
+        /* Reviews */
+        .review-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            height: 100%;
+        }
+        .review-stars { color: #f4a94e; font-size: 1rem; margin-bottom: 0.5rem; }
+        .review-text { font-size: 0.88rem; color: #555; margin-bottom: 0.8rem; }
+        .reviewer-name { font-size: 0.82rem; font-weight: 600; color: #333; }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
         <div class="container-fluid px-4">
-
-            <!-- Logo (far left) -->
             <a class="navbar-brand" href="index.html">
-                <img src="logo1.2.png" alt="Logo">
+                <img src="logo1.2.png" alt="Everleigh Bath Co.">
             </a>
-
-            <!-- Mobile toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-
-                <!-- Centre nav links — mx-auto centres this group -->
                 <ul class="navbar-nav mx-auto">
-
-                    <!-- Shop dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Shop
-                        </a>
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="moisturizers.html">Moisturizers</a></li>
+                            <li><a class="dropdown-item" href="moisterizers.html">Moisturizers</a></li>
                             <li><a class="dropdown-item" href="bodywash.html">Body Washes</a></li>
                             <li><a class="dropdown-item" href="haircare.html">Haircare</a></li>
                             <li><a class="dropdown-item" href="spf.html">SPF</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="bestsellers.html">Best Sellers</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a> <font-color>#333
-            
-                        </font-color>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="bestsellers.html">Best Sellers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 </ul>
-
-                
                 <div class="navbar-icons d-flex align-items-center">
                     <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
                     <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
                     <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
                 </div>
-
             </div>
         </div>
     </nav>
 
-    <!-- Discount promotion banner starts here -->
-     <!-- Discount promotion benner ends here -->
-    
-    
-
-     <!-- Multimedia carousel starts here -->
-
-     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="C:\Users\mimim\Desktop\Web andMultimedia Develpment\bida25-457\BEBE MELK.jpg" class="d-block w-100" alt="banner picture 1">
+    <!-- Discount Promotion Banner (under navbar, above carousel) -->
+    <div class="discount-banner">
+        🎉 Use code <strong>GENTLE10</strong> for 10% off your first order! &nbsp;
+        <a href="bestsellers.html">Shop Now →</a>
     </div>
-    <div class="carousel-item">
-      <img src="C:\Users\mimim\Desktop\Web andMultimedia Develpment\bida25-457\Nourishing Baby Face Cream Mini - 10ml _ Fragrance Free.jpg" class="d-block w-100" alt="banner picture 2">
+
+    <!-- Carousel (only Shop_Now + Natural_baby_care) -->
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="1"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video class="d-block w-100" autoplay muted loop playsinline
+                    style="max-height:520px; object-fit:cover;">
+                    <source src="Shop_Now.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <img src="Shopour_haircare_products.png" class="d-block w-100" alt="Shop Haircare">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-item">
-      <img src="C:\Users\mimim\Desktop\Web andMultimedia Develpment\bida25-457\Gentle Care for Sensitive Skin.jpg" class="d-block w-100" alt="banner picture 3">
-    </div>
-    <div class="carousel-item">
-      <img src="C:\Users\mimim\Desktop\Web andMultimedia Develpment\bida25-457\Tear free pre-teen cleanser_.jpg" class="d-block w-100" alt="banner picture 4">
-    </div>
-  </div>
 
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-    <!-- Multimedia carousel ends here -->
-
-
-
-    <!-- Reviews section starts here -->
-    <!-- Reviews section ends here -->
-
-    <!--Shop by category links start here -->
-    <!--Shop by category links end here -->
-
-    <!-- Shop by concern links start here -->
-    <!-- Shop by concern links end here -->
-  
-  
-    
-     <!--Footer starts here-->
-                <div class="navbar-icons d-flex align-items-center">
-                    <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
-                    <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
-                    <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
+    <!-- Reviews Section -->
+    <div class="section-reviews">
+    <div class="container py-2">
+        <h2 class="section-title">What Parents Are Saying</h2>
+        <p class="section-subtitle">Trusted by families across Botswana</p>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"My daughter has eczema and this is the only range that doesn't cause a flare-up. Absolutely love it!"</p>
+                    <span class="reviewer-name">— Keitumetse M., Gaborone</span>
                 </div>
-
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The baby face cream is incredible. So gentle and my newborn's skin has never looked better."</p>
+                    <span class="reviewer-name">— Thabo R., Francistown</span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"Great products, fast delivery. My kids actually enjoy bath time now thanks to the body washes!"</p>
+                    <span class="reviewer-name">— Mpho D., Maun</span>
+                </div>
             </div>
         </div>
-    </nav>
-  <footer class="footer">
-    <div class="footer-links">
-    <a href="aboutus.html">About Us</a>
+    </div>
+    </div>
+
+    <!-- Shop by Category — soft pink background -->
+    <div class="section-category">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <p class="section-subtitle">Find the right products for your little one</p>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <a href="kids.html" class="category-card">
+                        <img src="Tear_free_pre-teen_cleanser_.jpg" alt="Kids">
+                        <div class="category-label">Kids</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="infants.html" class="category-card">
+                        <img src="infants_category.jpg" alt="Infants">
+                        <div class="category-label">Infants</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="newborns.html" class="category-card">
+                        <img src="newborn_category.jpg" alt="Newborns">
+                        <div class="category-label">Newborns</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="haircare.html" class="category-card">
+                        <img src="Shopour_haircare_products.png" alt="Haircare">
+                        <div class="category-label">Haircare</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Soft divider between sections -->
+    <hr class="section-divider my-0">
+
+    <!-- Shop by Concern — soft blue background -->
+    <div class="section-concern">
+        <div class="container">
+            <h2 class="section-title">Shop by Concern</h2>
+            <p class="section-subtitle">Recommended products for specific skin needs</p>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <a href="eczema.html" class="concern-card">
+                        <i class="bi bi-droplet-half"></i>
+                        <h6>Eczema</h6>
+                        <p>Soothing formulas for sensitive, itchy skin</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="dryskin.html" class="concern-card">
+                        <i class="bi bi-sun"></i>
+                        <h6>Dry Skin</h6>
+                        <p>Deep moisture for dehydrated skin</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="cradlecap.html" class="concern-card">
+                        <i class="bi bi-emoji-smile"></i>
+                        <h6>Cradle Cap</h6>
+                        <p>Gentle scalp care for newborns</p>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="diaperrash.html" class="concern-card">
+                        <i class="bi bi-heart"></i>
+                        <h6>Diaper Rash</h6>
+                        <p>Barrier creams for nappy area comfort</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="logo1.2.png" alt="Everleigh Bath Co." class="footer-logo">
+        <div class="footer-links">
+            <a href="aboutus.html">About Us</a>
             <span class="footer-divider">|</span>
             <a href="contactus.html">Connect with us</a>
             <span class="footer-divider">|</span>
             <a href="#">Terms and Conditions</a>
             <span class="footer-divider">|</span>
             <a href="#">FAQ</a>
-            </div>
-    <p class="footer-text">&copy; 2026 Everleigh Bath Co.</p>
-
-  </footer>
-  <!--Footer end here-->
-    
-    
-
+        </div>
+        <p class="footer-text">&copy; 2026 Everleigh Bath Co.</p>
+    </footer>
 
 </body>
 </html>

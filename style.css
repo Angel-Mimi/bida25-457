@@ -1,149 +1,196 @@
-/*Navigation bar*/
-.navbar.sticky-top{
-    position: sticky;
-    top: 0;
-    z-index: 1030;
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* ── GLOBAL ── */
+body {
+    padding-bottom: 110px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffdf9;
 }
 
-        .navbar-nav .nav-link {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+/* ── NAVBAR ── */
+.navbar {
+    min-height: 100px;
+    background-color: #fff5f8 !important;
+    border-bottom: 2px solid #f7c5d0 !important;
+}
+.navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #7a4f5a !important;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover { color: #b5838d !important; }
+.navbar-icons a {
+    font-size: 1.3rem;
+    color: #7a4f5a;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+.navbar-icons a:hover { color: #b5838d; }
 
-    .navbar-icons a {
-        font-size: 1.3rem;
-        color: #000;
-        margin-left: 1rem;
-        text-decoration: none;
-    }
-    
-    .navbar-icons a:hover {
-        color: #555;
-    }
-
-    /*Logo box*/
-        .navbar-brand img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-            padding: 4px;
-        }
+/* ── LOGO ── */
 .navbar-brand img {
-    max-height: 70px;   /* keeps logo balanced */
-    width: auto;        /* maintains aspect ratio */
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    border: 2px solid #f7c5d0;
+    border-radius: 10px;
+    background-color: #fff5f8;
+    padding: 6px;
 }
 
-        
-
-       
-    
-    /*footer*/
-    
-    footer {
-            background-color: #E6E6FA;
-            color: white;
-            border-top: 1px solid #444;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .footerlinks {
-            color: #333;
-            text-decoration: none;
-            font-size: 0.875rem;
-            padding: 0 0.5rem;
-            transition: color 0.2s ease;
-        }
-
-        .footer-divider {
-            color: #444;
-            font-size: 0.875rem;
-        }
-
-        .footer-copy {
-            font-size: 0.875rem;
-            color: #888;
-            margin: 0;
-        }
-
-        
-
-<!--Navigation bar-->
-.navbar.sticky-top{
-    position: sticky;
-    top: 0;
-    z-index: 1030;
-    padding-left: 1rem;
-    padding-right: 1rem;
+/* ── DISCOUNT BANNER ── */
+.discount-banner {
+    background-color: #f7c5d0;
+    color: #5a2d3a;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+.discount-banner a {
+    color: #5a2d3a;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
-        .navbar-nav .nav-link {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+/* ── PAGE HERO (shop pages) ── */
+.page-hero {
+    background: linear-gradient(135deg, #fde8f0 0%, #e8f4fb 100%);
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.page-hero h2 { color: #7a4f5a; font-weight: 300; }
+.page-hero p { color: #999; }
 
-    .navbar-icons a {
-        font-size: 1.3rem;
-        color: #000;
-        margin-left: 1rem;
-        text-decoration: none;
-    }
-    
-    .navbar-icons a:hover {
-        color: #555;
-    }
+/* ── PRODUCT CARDS ── */
+.product-img { height: 220px; object-fit: cover; }
+.product-card {
+    transition: transform 0.2s;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 0;
+    background-color: #fffbfc;
+    box-shadow: 0 2px 12px rgba(181,131,141,0.1);
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(181,131,141,0.22) !important;
+}
+.card-title { color: #5a2d3a; }
+.btn-brand {
+    background-color: #b5838d;
+    border-color: #b5838d;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.btn-brand:hover { background-color: #9d6b74; color: #fff; }
+.badge-rec {
+    background-color: #d4f0e4;
+    color: #1a6640;
+    font-size: 0.72rem;
+    border-radius: 20px;
+    padding: 3px 10px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
 
-    <!--Logo box-->
-        .navbar-brand img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            background-color: #f8f9fa;
-            padding: 4px;
-        }
+/* ── SECTION COLOURS ── */
+/* Shop by Category — soft pink */
+.section-category { background-color: #fde8f0; padding: 2.5rem 0 2rem; }
+/* Shop by Concern — soft blue */
+.section-concern  { background-color: #e4f0fb; padding: 2.5rem 0 2rem; }
+/* Reviews — soft lavender */
+.section-reviews  { background-color: #f0edfb; padding: 2.5rem 0; }
 
-        
+.section-title { font-size: 1.6rem; font-weight: 300; text-align: center; margin-bottom: 0.3rem; color: #7a4f5a; }
+.section-subtitle { text-align: center; color: #aaa; font-size: 0.9rem; margin-bottom: 2rem; }
+.section-divider { width: 55%; margin: 0 auto; border: none; border-top: 1.5px solid #d9c7d4; }
 
-       
-    
-    <!--footer-->
-    
-    .footer {
-            background-color: #333;
-            color: white;
-            border-top: 1px solid #444;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .footerlinks {
-            color: #333;
-            text-decoration: none;
-            font-size: 0.875rem;
-            padding: 0 0.5rem;
-            transition: color 0.2s ease;
-        }
+/* ── CATEGORY CARDS ── */
+.category-card {
+    border-radius: 16px; overflow: hidden; position: relative;
+    cursor: pointer; transition: transform 0.2s; text-decoration: none; display: block;
+    box-shadow: 0 2px 10px rgba(181,131,141,0.15);
+}
+.category-card:hover { transform: translateY(-4px); }
+.category-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.category-card .category-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(90,45,58,0.7));
+    color: #fff; padding: 1rem 1rem 0.8rem;
+    font-size: 1rem; font-weight: 600;
+}
 
-        .footer-divider {
-            color: #444;
-            font-size: 0.875rem;
-        }
+/* ── CONCERN CARDS ── */
+.concern-card {
+    border-radius: 14px; background: #fff;
+    padding: 1.5rem 1rem; text-align: center;
+    text-decoration: none; color: #333; display: block;
+    transition: transform 0.2s, box-shadow 0.2s; height: 100%;
+    box-shadow: 0 2px 10px rgba(100,160,220,0.1);
+    border: 1.5px solid #d6eaf8;
+}
+.concern-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(100,160,220,0.18); color: #333; }
+.concern-card i { font-size: 2rem; color: #6aaed6; margin-bottom: 0.6rem; display: block; }
+.concern-card h6 { font-weight: 600; color: #2e6da4; margin-bottom: 0.3rem; }
+.concern-card p { font-size: 0.8rem; color: #888; margin: 0; }
 
-        .footer-copy {
-            font-size: 0.875rem;
-            color: #888;
-            margin: 0;
-        }
+/* ── REVIEW CARDS ── */
+.review-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(181,131,141,0.1);
+    height: 100%;
+    border-left: 4px solid #f7c5d0;
+}
+.review-stars { color: #f4a94e; font-size: 1rem; margin-bottom: 0.5rem; }
+.review-text { font-size: 0.88rem; color: #666; margin-bottom: 0.8rem; font-style: italic; }
+.reviewer-name { font-size: 0.82rem; font-weight: 600; color: #b5838d; }
+
+/* ── ABOUT US ── */
+.about-hero { background: linear-gradient(135deg, #fde8f0 0%, #e8f4fb 100%); padding: 4rem 1rem; }
+.about-value {
+    background: #fff; border-radius: 14px; padding: 2rem;
+    box-shadow: 0 2px 12px rgba(181,131,141,0.1); height: 100%;
+    border-top: 4px solid #f7c5d0;
+}
+.about-value i { font-size: 2rem; color: #b5838d; }
+
+/* ── CONTACT US ── */
+.contact-hero { background: linear-gradient(135deg, #e4f0fb 0%, #fde8f0 100%); padding: 3rem 1rem; }
+
+/* ── CART ── */
+.cart-summary { background: linear-gradient(135deg, #fde8f0, #f0edfb); border-radius: 14px; padding: 1.5rem; }
+
+/* ── PROFILE ── */
+.nav-pills .nav-link.active { background-color: #b5838d; }
+.nav-pills .nav-link { color: #7a4f5a; }
+
+/* ── FORM CONTROLS ── */
+.form-control:focus, .form-select:focus {
+    border-color: #b5838d;
+    box-shadow: 0 0 0 0.2rem rgba(181,131,141,0.25);
+}
+
+/* ── FOOTER ── */
+.footer {
+    background: linear-gradient(90deg, #fde8f0, #e6e6fa, #e4f0fb);
+    color: #5a2d3a;
+    border-top: 2px solid #f7c5d0;
+    text-align: center;
+    padding: 10px 10px 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.footer-logo { height: 36px; width: auto; object-fit: contain; display: block; margin: 0 auto 3px; }
+.footer-links a { color: #5a2d3a; text-decoration: none; font-size: 0.82rem; padding: 0 0.4rem; }
+.footer-links a:hover { color: #9d6b74; }
+.footer-divider { color: #b5838d; font-size: 0.82rem; }
+.footer-text { font-size: 0.78rem; color: #9d6b74; margin: 2px 0 0; }
 
         

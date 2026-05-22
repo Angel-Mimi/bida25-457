@@ -7,65 +7,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Cart</title>
-</head>
-<body>
-    <a href="index.html">Home</a><br>
-    <a href="shop.html">Shop</a><br> //insert drop down menu here
-    <a href="bestsellers.html">Best Sellers</a><br>
-    <a href="aboutus.html">About Us</a><br>
-    <a href="profile.html">Profile</a><br>
-    <a href="cart.html">Cart</a><br>
-    <a href="contactus.html">Contact Us</a><br> 
-
-
-    
+    <title>Cart - Everleigh Bath Co.</title>
     <style>
-        .navbar-nav.mx-auto .nav-link {
-            padding-left: 1rem;
-            padding-right: 1rem;
+        .footer {
+            background-color: #E6E6FA;
+            color: #333;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            padding: 16px 10px 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
-
-        .navbar-icons a {
-            font-size: 1.3rem;
-            color: #000;
-            margin-left: 1rem;
-            text-decoration: none;
-        }
-
-        .navbar-icons a:hover {
-            color: #555;
-        }
+        .footer-logo { height: 40px; margin-bottom: 6px; }
+        .footer-links a { color: #333; text-decoration: none; font-size: 0.85rem; padding: 0 0.5rem; }
+        .footer-links a:hover { color: #b5838d; }
+        .footer-divider { color: #888; font-size: 0.85rem; }
+        .footer-text { font-size: 0.8rem; color: #777; margin: 4px 0 0; }
+        .page-hero { background-color: #f8f4f0; padding: 3rem 1rem; margin-bottom: 2rem; }
+        .product-img { height: 220px; object-fit: cover; }
+        .product-card { transition: transform 0.2s; border-radius: 12px; overflow: hidden; border: 0; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important; }
+        .btn-brand { background-color: #b5838d; border-color: #b5838d; color: #fff; }
+        .btn-brand:hover { background-color: #9d6b74; color: #fff; }
+        .badge-rec { background-color: #d4edda; color: #155724; font-size: 0.72rem; border-radius: 20px; padding: 3px 10px; display: inline-block; margin-bottom: 6px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-        <div class="container">
-
-            <!-- Logo (left) -->
+        <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
-                <img src="logo1.2.png" alt="Logo" width="60" height="60">
+                <img src="logo1.2.png" alt="Everleigh Bath Co.">
             </a>
-
-            <!-- Mobile toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-
-                <!-- Centre nav links -->
                 <ul class="navbar-nav mx-auto">
-
-                    <!-- Shop dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Shop
-                        </a>
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="moisterizers.html">Moisturizers</a></li>
                             <li><a class="dropdown-item" href="bodywash.html">Body Washes</a></li>
@@ -73,53 +57,137 @@
                             <li><a class="dropdown-item" href="spf.html">SPF</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="bestsellers.html">Best Sellers</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="bestsellers.html">Best Sellers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 </ul>
-
-                
                 <div class="navbar-icons d-flex align-items-center">
                     <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
                     <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
                     <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
                 </div>
-
             </div>
         </div>
     </nav>
-    
-    
 
-    <!--Footer starts here-->
-                <div class="navbar-icons d-flex align-items-center">
-                    <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
-                    <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
-                    <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
+
+    <div class="container my-5">
+        <h3 class="fw-light mb-4">Your Cart</h3>
+        <div class="row g-4">
+            <div class="col-md-8">
+                <div class="card border-0 shadow-sm p-3 mb-3" style="border-radius:14px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="Nourishing_Baby_Face_Cream_Mini_-_10ml___Fragrance_Free.jpg"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;" alt="Product">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0 fw-semibold">Baby Face Cream Mini</h6>
+                            <small class="text-muted">Fragrance Free · 10ml</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,-1)">−</button>
+                            <span class="qty">1</span>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,1)">+</button>
+                        </div>
+                        <span class="fw-bold item-price" data-price="89">P89</span>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeItem(this)"><i class="bi bi-trash"></i></button>
+                    </div>
                 </div>
+                <div class="card border-0 shadow-sm p-3 mb-3" style="border-radius:14px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="BEBE_MELK.jpg"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;" alt="Product">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0 fw-semibold">Bébé Melk Wash</h6>
+                            <small class="text-muted">Creamy milk-based body wash</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,-1)">−</button>
+                            <span class="qty">1</span>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,1)">+</button>
+                        </div>
+                        <span class="fw-bold item-price" data-price="130">P130</span>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeItem(this)"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm p-3 mb-3" style="border-radius:14px;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="Nappycream.jpg"
+                            style="width:80px;height:80px;object-fit:cover;border-radius:10px;" alt="Product">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0 fw-semibold">Nappy Cream</h6>
+                            <small class="text-muted">Protective barrier cream</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,-1)">−</button>
+                            <span class="qty">1</span>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(this,1)">+</button>
+                        </div>
+                        <span class="fw-bold item-price" data-price="95">P95</span>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeItem(this)"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm p-4" style="border-radius:14px;background:#f8f4f0;">
+                    <h6 class="fw-semibold mb-3">Total Cost</h6>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted small">Subtotal</span>
+                        <span id="subtotal">P314</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span class="text-muted small">Shipping</span>
+                        <span>P30</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold mb-4">
+                        <span>Total</span>
+                        <span id="total">P344</span>
+                    </div>
+                    <a href="#" class="btn btn-dark w-100">Check Out</a>
+                </div>
             </div>
         </div>
-    </nav>
-  <footer class="footer">
-    <div class="footer-links">
-    <a href="aboutus.html">About Us</a>
+    </div>
+
+    <script>
+        function updateQty(btn, change) {
+            const row = btn.closest('.card');
+            const qtyEl = row.querySelector('.qty');
+            const priceEl = row.querySelector('.item-price');
+            let qty = parseInt(qtyEl.textContent) + change;
+            if (qty < 1) qty = 1;
+            qtyEl.textContent = qty;
+            const unitPrice = parseInt(priceEl.dataset.price);
+            priceEl.textContent = 'P' + (unitPrice * qty);
+            recalcTotal();
+        }
+        function removeItem(btn) {
+            btn.closest('.card').remove();
+            recalcTotal();
+        }
+        function recalcTotal() {
+            let sub = 0;
+            document.querySelectorAll('.item-price').forEach(el => {
+                sub += parseInt(el.textContent.replace('P',''));
+            });
+            document.getElementById('subtotal').textContent = 'P' + sub;
+            document.getElementById('total').textContent = 'P' + (sub + 30);
+        }
+    </script>
+
+    <footer class="footer">
+        <img src="logo1.2.png" alt="Everleigh Bath Co." class="footer-logo">
+        <div class="footer-links">
+            <a href="aboutus.html">About Us</a>
             <span class="footer-divider">|</span>
             <a href="contactus.html">Connect with us</a>
             <span class="footer-divider">|</span>
             <a href="#">Terms and Conditions</a>
             <span class="footer-divider">|</span>
             <a href="#">FAQ</a>
-            </div>
-    <p class="footer-text"> &copy; 2026 Everleigh Bath Co.</p>
+        </div>
+        <p class="footer-text">&copy; 2026 Everleigh Bath Co.</p>
+    </footer>
 
-  </footer>
-  <!--Footer ends here-->
 </body>
 </html>

@@ -7,57 +7,141 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Contact Us</title>
-</head>
-
-<body>
-    
+    <title>Contact Us - Everleigh Bath Co.</title>
     <style>
-        .navbar-nav.mx-auto .nav-link {
-            padding-left: 1rem;
-            padding-right: 1rem;
+        .connect-hero {
+            background: linear-gradient(135deg, #fde8f0 0%, #e4f0fb 100%);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
         }
-
-        .navbar-icons a {
-            font-size: 1.3rem;
-            color: #000;
-            margin-left: 1rem;
+        .connect-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 300;
+            color: #5a2d3a;
+            margin-bottom: 1rem;
+        }
+        .connect-hero p {
+            color: #888;
+            max-width: 560px;
+            margin: 0 auto 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-top: 1.2rem;
+        }
+        .social-icons a {
+            font-size: 1.8rem;
+            color: #5a2d3a;
             text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .social-icons a:hover {
+            color: #b5838d;
+            transform: translateY(-3px);
         }
 
-        .navbar-icons a:hover {
-            color: #555;
+        .divider-line {
+            border: none;
+            border-top: 1.5px solid #e0c8d0;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .bottom-section {
+            background-color: #fffdf9;
+            padding: 2.5rem 0 3rem;
+        }
+
+        .faq-block h5 {
+            font-weight: 600;
+            color: #5a2d3a;
+            margin-bottom: 0.5rem;
+        }
+        .faq-block p {
+            font-size: 0.88rem;
+            color: #888;
+            line-height: 1.6;
+        }
+        .accordion-button {
+            font-size: 0.88rem;
+            color: #5a2d3a;
+            background-color: #fff5f8;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #fde8f0;
+            color: #5a2d3a;
+            box-shadow: none;
+        }
+        .accordion-body {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .form-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 16px rgba(181,131,141,0.1);
+            border: 1.5px solid #f7c5d0;
+        }
+        .form-label { font-size: 0.85rem; font-weight: 600; color: #5a2d3a; }
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1.5px solid #e8d0d8;
+            font-size: 0.88rem;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #b5838d;
+            box-shadow: 0 0 0 0.2rem rgba(181,131,141,0.2);
+        }
+        .btn-send {
+            background-color: #b5838d;
+            border-color: #b5838d;
+            color: #fff;
+            border-radius: 20px;
+            padding: 0.5rem 2.5rem;
+            font-size: 0.9rem;
+        }
+        .btn-send:hover { background-color: #9d6b74; color: #fff; }
+
+        .form-row-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            align-items: start;
+        }
+        .form-left { display: flex; flex-direction: column; gap: 0.9rem; }
+        .form-right { display: flex; flex-direction: column; height: 100%; }
+        .form-right textarea { flex: 1; min-height: 160px; resize: none; }
+        .send-row { display: flex; justify-content: flex-end; margin-top: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .form-row-layout { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-        <div class="container">
-
-            <!-- Logo (left) -->
+        <div class="container-fluid px-4">
             <a class="navbar-brand" href="index.html">
-                <img src="logo1.2.png" alt="Logo" width="60" height="60">
+                <img src="logo1.2.png" alt="Everleigh Bath Co.">
             </a>
-
-            <!-- Mobile toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarNav">
-
-                <!-- Centre nav links -->
                 <ul class="navbar-nav mx-auto">
-
-                    <!-- Shop dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Shop
-                        </a>
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="moisterizers.html">Moisturizers</a></li>
                             <li><a class="dropdown-item" href="bodywash.html">Body Washes</a></li>
@@ -65,51 +149,145 @@
                             <li><a class="dropdown-item" href="spf.html">SPF</a></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="bestsellers.html">Best Sellers</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-
+                    <li class="nav-item"><a class="nav-link" href="bestsellers.html">Best Sellers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
                 </ul>
-
-                
                 <div class="navbar-icons d-flex align-items-center">
                     <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
                     <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
                     <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
                 </div>
-
             </div>
         </div>
     </nav>
 
-    <!--Footer starts here-->
-                <div class="navbar-icons d-flex align-items-center">
-                    <a href="profile.html" title="Profile"><i class="bi bi-person"></i></a>
-                    <a href="cart.html" title="Cart"><i class="bi bi-cart"></i></a>
-                    <a href="contactus.html" title="Contact Us"><i class="bi bi-headphones"></i></a>
+    <!-- Hero: Connect with us + social icons -->
+    <div class="connect-hero">
+        <h1>Connect with us!</h1>
+        <p>We'd love to hear from you. Whether you have a question about our products, need advice on what's best for your little one's skin, or just want to say hello — we're here for you.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="mailto:hello@everleighbathco.com" title="Email"><i class="bi bi-envelope"></i></a>
+        </div>
+    </div>
+
+    <hr class="divider-line my-0">
+
+    <!-- FAQ + Form -->
+    <div class="bottom-section">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Left: FAQ -->
+                <div class="col-md-5">
+                    <div class="faq-block mb-3">
+                        <h5>FAQ</h5>
+                        <p>Have a question? Check our most common ones below.</p>
+                    </div>
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item border rounded mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Are your products safe for newborns?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes! All our products are dermatologist tested and approved by paediatricians for use on newborn skin.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border rounded mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you deliver across Botswana?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, we deliver nationwide. Standard delivery takes 3–5 business days.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border rounded mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Are your products fragrance-free?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Most of our baby range is fragrance-free. Each product page clearly indicates if fragrance is included.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border rounded mb-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rounded" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I return a product?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, we accept returns within 14 days of purchase if the product is unused and in its original packaging.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Message form -->
+                <div class="col-md-7">
+                    <div class="form-card">
+                        <div class="form-row-layout">
+                            <!-- Left column: Name, Email, Reason -->
+                            <div class="form-left">
+                                <div>
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="you@example.com">
+                                </div>
+                                <div>
+                                    <label class="form-label">Reason for message</label>
+                                    <select class="form-select">
+                                        <option value="" disabled selected>Select a reason</option>
+                                        <option>Query</option>
+                                        <option>Review</option>
+                                        <option>Complaint</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Right column: Text area + Send -->
+                            <div class="form-right">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" placeholder="Type your message here..."></textarea>
+                                <div class="send-row">
+                                    <button class="btn btn-send">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
-    </nav>
-  <footer class="footer">
-    <div class="footer-links">
-    <a href="aboutus.html">About Us</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="logo1.2.png" alt="Everleigh Bath Co." class="footer-logo">
+        <div class="footer-links">
+            <a href="aboutus.html">About Us</a>
             <span class="footer-divider">|</span>
             <a href="contactus.html">Connect with us</a>
             <span class="footer-divider">|</span>
             <a href="#">Terms and Conditions</a>
             <span class="footer-divider">|</span>
             <a href="#">FAQ</a>
-            </div>
-    <p class="footer-text">&copy; 2026 Everleigh Bath Co.</p>
+        </div>
+        <p class="footer-text">&copy; 2026 Everleigh Bath Co.</p>
+    </footer>
 
-  </footer>
-  <!--Footer ends here-->    
 </body>
 </html>
