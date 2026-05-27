@@ -1,4 +1,4 @@
-/* ── GLOBAL ── */
+
 body {
     padding-bottom: 110px;
     font-family: 'Segoe UI', sans-serif;
@@ -173,6 +173,12 @@ body {
 .form-control:focus, .form-select:focus {
     border-color: #b5838d;
     box-shadow: 0 0 0 0.2rem rgba(181,131,141,0.25);
+}
+/*carousel images*/
+.carousel-img {
+    max-height: 500px;      
+    object-fit: contain;    
+    background-color: #fff;
 }
 
 /* ── FOOTER ── */
